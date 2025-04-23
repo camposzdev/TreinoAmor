@@ -1,247 +1,187 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TREINOS DO MEU AMOR</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f3e5f5;
-            color: #4a148c;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Treinos do Meu Amor</title>
+  <style>
+    :root {
+      --roxo-claro: #e1bee7;
+      --roxo-medio: #ba68c8;
+      --roxo-escuro: #6a1b9a;
+      --roxo-forte: #8e24aa;
+      --branco: #ffffff;
+      --preto-transparente: rgba(0, 0, 0, 0.05);
+    }
 
-        header {
-            text-align: center;
-            padding: 30px;
-            background-color: #ba68c8;
-            color: white;
-            border-bottom: 5px solid #8e24aa;
-        }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: var(--roxo-claro);
+      color: var(--roxo-escuro);
+    }
 
-        .container {
-            max-width: 900px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff3e0;
-            border-radius: 16px;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
-            border: 2px solid #ba68c8;
-        }
+    header {
+      text-align: center;
+      padding: 30px 10px;
+      background-color: var(--roxo-medio);
+      color: white;
+      box-shadow: 0 2px 10px var(--preto-transparente);
+    }
 
-        h1, h2 {
-            color: #6a1b9a;
-        }
+    header h1 {
+      font-size: 2.2em;
+      margin: 0;
+    }
 
-        h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-        }
+    .container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: var(--branco);
+      border-radius: 16px;
+      box-shadow: 0 4px 20px var(--preto-transparente);
+      border: 2px solid var(--roxo-medio);
+    }
 
-        h2 {
-            font-size: 1.8em;
-            margin-top: 40px;
-            color: #7b1fa2;
-        }
+    h2 {
+      color: var(--roxo-forte);
+      font-size: 1.8em;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      text-align: center;
+    }
 
-        .gallery {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-        }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
 
-        .gallery img {
-            width: 200px;
-            margin: 10px;
-            border-radius: 12px;
-            border: 4px solid #ce93d8;
-        }
+    .gallery img {
+      width: 160px;
+      height: auto;
+      border-radius: 12px;
+      border: 4px solid var(--roxo-claro);
+    }
 
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-            background-color: #e1bee7;
-            border-radius: 8px;
-            overflow: hidden;
-        }
+    .day {
+      margin-bottom: 30px;
+    }
 
-        table, th, td {
-            border: 1px solid #ce93d8;
-        }
+    .day h3 {
+      color: var(--roxo-escuro);
+      font-size: 1.4em;
+      margin-bottom: 10px;
+    }
 
-        th, td {
-            padding: 12px;
-            text-align: center;
-            font-size: 1.1em;
-        }
+    ul {
+      background-color: #f9f2fb;
+      padding: 15px;
+      border-radius: 10px;
+      list-style-type: square;
+      border: 1px solid var(--roxo-claro);
+    }
 
-        th {
-            background-color: #ab47bc;
-            color: white;
-        }
+    ul li {
+      margin-bottom: 8px;
+    }
 
-        td {
-            background-color: #f3e5f5;
-        }
+    @media (max-width: 768px) {
+      header h1 {
+        font-size: 1.7em;
+      }
 
-        /* Responsividade para celular */
-        @media (max-width: 768px) {
-            body {
-                padding: 0 10px;
-            }
+      .container {
+        padding: 15px;
+      }
 
-            table, th, td {
-                font-size: 0.9em;
-            }
+      h2 {
+        font-size: 1.4em;
+      }
 
-            .gallery img {
-                width: 150px;
-            }
-
-            h1 {
-                font-size: 2em;
-            }
-
-            h2 {
-                font-size: 1.5em;
-            }
-        }
-
-        /* Botões e links*/
-        button, a {
-            display: inline-block;
-            padding: 10px 20px;
-            margin: 20px 0;
-            background-color: #ba68c8;
-            color: white;
-            border-radius: 20px;
-            text-decoration: none;
-            font-weight: bold;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
-            transition: background-color 0.3s ease;
-        }
-
-        button:hover, a:hover {
-            background-color: #8e24aa;
-        }
-    </style>
+      .gallery img {
+        width: 120px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<header>
+  <header>
     <h1>Bem-vinda Amor</h1>
-    <p>Confira seus treininhos e dieta!</p>
-</header>
+    <p>Confira seus treininhos! 💪💜</p>
+  </header>
 
-<div class="container">
-    
+  <div class="container">
     <div class="gallery">
-        <img src="https://assets.onecompiler.app/42txb5vgf/42tx9xtwv/ela.PNG">
-        <img src="https://assets.onecompiler.app/42txb5vgf/42tx9xtwv/EU.jpg">
-        
+      <img src="camis.PNG" >
+      <img src="eu.jpg" >
     </div>
 
     <h2>Treinos da Semana</h2>
-    <table>
-        <tr>
-            <th>Dia</th>
-            <th>Grupo Muscular</th>
-        </tr>
-        <tr>
-            <td>Segunda</td>
-            <td>Braços completos</td>
-        </tr>
-        <tr>
-            <td>Terça</td>
-            <td>Costas</td>
-        </tr>
-        <tr>
-            <td>Quarta</td>
-            <td>Glúteos</td>
-        </tr>
-        <tr>
-            <td>Quinta</td>
-            <td>Abdomên</td>
-        </tr>
-        <tr>
-            <td>Sexta</td>
-            <td>Corpo Completo com enfase em perna</td>
-        </tr>
-    </table>
 
-    <h2>Plano Alimentar</h2>
-    <table border="1" cellpadding="10">
-  <tr>
-    <th>Refeição</th>
-    <th>Opções</th>
-  </tr>
-  
-  <tr>
-    <td><b>Café da Manhã</b></td>
-    <td>
+    <div class="day">
+      <h3> Segunda-feira – Posterior de Coxa & Glúteos</h3>
       <ul>
-        <li>Omelete com ovos + 1 fatia de pão integral com pasta de amendoim</li>
-        <li><i>Alternativa de fruta:</i>banana ou frutas vermelhas</li>
+        <li>Cadeira Abdutora – 3x15</li>
+        <li>Mesa Flexora  – 3x12</li>
+        <li>Elevação Pélvica (máquina ou banco) – 3x12</li>
+        <li>Cadeira Flexora Sentada – 3x12</li>
+        <li>Leg Press – 3x12</li>
+        <li>Agachamento no Smith – 3x10</li>
       </ul>
-    </td>
-  </tr>
+    </div>
 
-  <tr>
-    <td><b>Lanche da Manhã</b></td>
-    <td>
+    <div class="day">
+      <h3> Terça-feira – Costas & Bíceps</h3>
       <ul>
-        <li>Iogurte grego natural + amêndoas ou aveia</li>
-        <li>1 barrinha de proteína com baixo teor de açúcar e gordura </li>
+        <li>Puxada Alta Aberta – 3x12</li>
+        <li>Remada Baixa na Máquina – 3x12</li>
+        <li>Remada Unilateral Máquina – 3x12 (cada lado)</li>
+        <li>Rosca Direta na Polia – 3x12</li>
+        <li>Rosca Martelo com Halteres – 3x10</li>
       </ul>
-    </td>
-  </tr>
+    </div>
 
-  <tr>
-    <td><b>Almoço</b></td>
-    <td>
+    <div class="day">
+      <h3> Quarta-feira – Quadríceps</h3>
       <ul>
-        <li><b>Proteínas:</b> Filé de frango grelhado ou assado (150g) / Carne vermelha magra</li>
-        <li><b>Carboidratos:</b> arroz integral / batata-doce assada</li>
-        <li><b>Salada:</b> salada simples (alface e tomate)</li>
+        <li>Cadeira Extensora – 3x12</li>
+        <li>Leg Press – 3x12</li>
+        <li>Agachamento no Smith – 3x10</li>
+        <li>Cadeira Adutora – 3x15</li>
+        <li>Panturrilha Máquina – 3x15</li>
       </ul>
-    </td>
-  </tr>
+    </div>
 
-  <tr>
-    <td><b>Lanche da Tarde</b></td>
-    <td>
+    <div class="day">
+      <h3> Quinta-feira – Peito, Ombro & Tríceps</h3>
       <ul>
-        <li>Pão com fatias de peito de peru com queijo branco ou lanche natural com frango</li>
-        <li>Shake de proteína com leite + 1 colher de sopa de manteiga de amendoim</li>
+        <li>Supino Máquina (reto) – 3x12</li>
+        <li>Desenvolvimento de Ombros na Máquina – 3x12</li>
+        <li>Elevação Lateral com Halteres – 3x12</li>
+        <li>Tríceps Pulley – 3x12</li>
+        <li>Tríceps Francês – 3x12</li>
       </ul>
-    </td>
-  </tr>
+    </div>
 
-  <tr>
-    <td><b>Jantar</b></td>
-    <td>
+    <div class="day">
+      <h3> Sexta-feira – Posterior de Coxa & Glúteos </h3>
       <ul>
-        <li><b>Proteínas:</b> Omelete + queijo / Filé de frango ou carne magra grelhada (150g)</li>
-        <li><b>Carboidratos:</b>arroz / 1 porção de massa integral </li>
-        <li><b>Salada:</b>salada simples</li>
+        <li>Cadeira Abdutora – 3x15</li>
+        <li>Leg Press  – 3x12</li>
+        <li>Glúteo 4 Apoios na Máquina – 3x15 (cada perna)</li>
+        <li>Cadeira Flexora – 3x12</li>
+        <li>Elevação Pélvica  – 3x12</li>
+        <li>Agachamento no Smith  – 3x10</li>
       </ul>
-    </td>
-  </tr>
+    </div>
 
-  <tr>
-    <td><b>Ceia</b></td>
-    <td>
-      <ul>
-        <li>1 copo de iogurte grego natural + canela</li>
-      </ul>
-    </td>
-  </tr>
-</table>
-
-</div>
+  </div>
 
 </body>
 </html>
